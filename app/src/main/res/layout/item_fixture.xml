@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:Skeleton="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="2dp"
+            app:cardElevation="5dp"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+
+        <io.rmiri.skeleton.SkeletonGroup
+                android:id="@+id/skeletonGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                Skeleton:SK_BackgroundViewsColor="#EEEEEE"
+                Skeleton:SK_animationAutoStart="true"
+                Skeleton:SK_animationDirection="LTR"
+                Skeleton:SK_animationDuration="1000"
+                Skeleton:SK_animationFinishType="gradient"
+                Skeleton:SK_animationNormalType="gradient"
+                Skeleton:SK_backgroundMainColor="@android:color/transparent"
+                Skeleton:SK_highLightColor="#DEDEDE">
+
+            <RelativeLayout android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:foreground="?selectableItemBackground"
+                            android:layout_height="wrap_content">
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/container_title">
+
+                    <io.rmiri.skeleton.SkeletonView
+                            android:id="@+id/skeletontitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            Skeleton:SK_cornerRadius="0dp"
+                            Skeleton:SK_padding="0dp"
+                            Skeleton:SK_shapeType="rect">
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:id="@+id/txt_title_competiton"
+                                  android:textAllCaps="true"
+                                  android:text="asdasdasd"
+                                  android:fontFamily="@font/avenir_next_demibold"
+                                  android:layout_height="wrap_content"/>
+
+                    </io.rmiri.skeleton.SkeletonView>
+
+                    <io.rmiri.skeleton.SkeletonView
+                            android:id="@+id/skeletonplace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            Skeleton:SK_cornerRadius="0dp"
+                            Skeleton:SK_padding="0dp"
+                            android:layout_below="@id/skeletontitle"
+                            Skeleton:SK_shapeType="rect">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:fontFamily="@font/avenir_next_regular"
+                                  android:text="asdasdasd"
+                                  android:layout_below="@id/txt_title_competiton"
+                                  android:id="@+id/txt_date_place"/>
+
+
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:fontFamily="@font/avenir_next_regular"
+                                  android:text="asdasdasd"
+                                  android:layout_toRightOf="@id/txt_date_place"
+                                  android:id="@+id/txt_date"/>
+                    </io.rmiri.skeleton.SkeletonView>
+
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:paddingEnd="8dp"
+                              android:paddingStart="8dp"
+                              android:id="@+id/txt_state"
+                              android:paddingTop="2dp"
+                              android:paddingBottom="2dp"
+                              android:fontFamily="@font/avenir_next_regular"
+                              android:visibility="gone"
+                              android:layout_centerVertical="true"
+                              android:background="@android:color/holo_red_dark"
+                              android:textColor="@android:color/white"
+                              android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_below="@id/container_title">
+                    <io.rmiri.skeleton.SkeletonView
+                            android:id="@+id/skeletonhometeam"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            Skeleton:SK_cornerRadius="0dp"
+                            android:layout_toStartOf="@id/line"
+                            android:layout_marginEnd="10dp"
+                            Skeleton:SK_padding="0dp"
+                            Skeleton:SK_shapeType="rect">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:id="@+id/txt_home_team"
+                                  android:text="asdasdasd"
+                                  android:fontFamily="@font/avenir_next_demibold"
+                                  android:textSize="@dimen/dim_16sp"/>
+                    </io.rmiri.skeleton.SkeletonView>
+
+                    <io.rmiri.skeleton.SkeletonView
+                            android:id="@+id/skeleton_away_team"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            Skeleton:SK_cornerRadius="0dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_toStartOf="@id/line"
+                            android:layout_below="@id/skeletonhometeam"
+                            android:layout_marginEnd="10dp"
+                            Skeleton:SK_padding="0dp"
+                            Skeleton:SK_shapeType="rect">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_below="@id/txt_home_team"
+                                  android:id="@+id/txt_away_team"
+                                  android:text="asdasdasd"
+                                  android:textSize="@dimen/dim_16sp"
+                                  android:fontFamily="@font/avenir_next_demibold"
+                                  android:layout_height="wrap_content"/>
+                    </io.rmiri.skeleton.SkeletonView>
+
+
+
+
+
+
+                            <io.rmiri.skeleton.SkeletonView
+                                    android:id="@+id/skeleton_day"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    Skeleton:SK_cornerRadius="0dp"
+                                    android:layout_alignParentEnd="true"
+                                    Skeleton:SK_padding="0dp"
+                                    android:layout_marginEnd="15dp"
+                                    Skeleton:SK_shapeType="rect">
+
+                                <TextView android:layout_width="wrap_content"
+                                          android:fontFamily="@font/avenir_next_demibold"
+                                          android:id="@+id/txt_score_home"
+                                          android:textSize="@dimen/dim_16sp"
+                                          android:text="a"
+                                          android:gravity="center"
+                                          android:layout_centerHorizontal="true"
+                                          android:layout_height="wrap_content"/>
+                            </io.rmiri.skeleton.SkeletonView>
+
+                            <io.rmiri.skeleton.SkeletonView
+                                    android:id="@+id/skeleton_day_week"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginEnd="15dp"
+                                    android:layout_height="wrap_content"
+                                    Skeleton:SK_cornerRadius="0dp"
+                                    Skeleton:SK_padding="0dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_below="@id/skeleton_day"
+                                    Skeleton:SK_shapeType="rect">
+
+                                <TextView android:layout_width="wrap_content"
+                                          android:textAllCaps="true"
+                                          android:fontFamily="@font/avenir_next_demibold"
+                                          android:layout_centerHorizontal="true"
+                                          android:id="@+id/txt_score_away"
+                                          android:layout_height="wrap_content"/>
+
+                            </io.rmiri.skeleton.SkeletonView>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </io.rmiri.skeleton.SkeletonGroup>
+    </android.support.v7.widget.CardView>
+</layout>

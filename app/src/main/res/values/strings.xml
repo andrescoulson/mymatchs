@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMatchs</string>
+
+    <string name="results">Results</string>
+    <string name="fixture">Fixtures</string>
+    <string name="err_fetch">Error fetching data</string>
+</resources>
